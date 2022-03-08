@@ -1,0 +1,1 @@
+curl -H 'Content-Type: application/x-www-form-urlencoded' -X POST https://animeify.net/animeify/apis_v2/servers/episode_links.php -d 'AnimeId=x227&Episode=1'

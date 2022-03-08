@@ -1,0 +1,1112 @@
+curl -H 'cache-control: stale-if-error=2147483647' -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'authorization: Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU' --compressed 'https://courses.edx.org/api/courses/v2/blocks/?depth=all&requested_fields=contains_gated_content,show_gated_sections,special_exam_info,graded,format,student_view_multi_device,due,completion&student_view_data=video,discussion&block_counts=video&nav_depth=3&username=ah7255703&course_id=course-v1%3AHarvardX%2BCS50W%2BWeb'
+
+
+import requests
+
+headers = {
+    'cache-control': 'stale-if-error=2147483647',
+    'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2',
+    'authorization': 'Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU',
+}
+
+params = (
+    ('depth', 'all'),
+    ('requested_fields', 'contains_gated_content,show_gated_sections,special_exam_info,graded,format,student_view_multi_device,due,completion'),
+    ('student_view_data', 'video,discussion'),
+    ('block_counts', 'video'),
+    ('nav_depth', '3'),
+    ('username', 'ah7255703'),
+    ('course_id', 'course-v1:HarvardX+CS50W+Web'),
+)
+
+response = requests.get('https://courses.edx.org/api/courses/v2/blocks/', headers=headers, params=params)
+
+
+{
+	"root": "block-v1:HarvardX+CS50W+Web+type@course+block@course",
+	"blocks": {
+		"block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f",
+			"block_id": "79bff0abcb6a4b7d99708b83eefeb45f",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f",
+			"type": "video",
+			"display_name": "Introduction",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 132.565,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/a96c433f-cfa4-4688-a08e-5206b2a0cb52.m3u8",
+						"file_size": 0
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/a96c433f-cfa4-4688-a08e-5206b2a0cb52-mp4_720p.mp4",
+						"file_size": 10733344
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/a96c433f-cfa4-4688-a08e-5206b2a0cb52-mp4_360p.mp4",
+						"file_size": 2407824
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2",
+			"block_id": "63c92dedcf504526bd217dd8728dabc2",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2",
+			"type": "vertical",
+			"display_name": "Introduction",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@79bff0abcb6a4b7d99708b83eefeb45f"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff",
+			"block_id": "cd0baed1a0854561a870e0d8db72f7ff",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff",
+			"type": "sequential",
+			"display_name": "Introduction",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@63c92dedcf504526bd217dd8728dabc2"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389",
+			"block_id": "88d639c55ef54ca0b8e8b0bf6c3ab389",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389",
+			"type": "html",
+			"display_name": "HTML, CSS",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 1.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465",
+			"block_id": "abbe52e8a67b4418ae75d84f92c84465",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465",
+			"type": "vertical",
+			"display_name": "HTML, CSS",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@88d639c55ef54ca0b8e8b0bf6c3ab389"
+			],
+			"completion": 1
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043",
+			"block_id": "8efd3b50dc5041c195863cd6e3712043",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 7411.65,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001300/HarvardXCS50W-V001300.m3u8",
+						"file_size": 0
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001300_MB2.mp4",
+						"file_size": 209535648
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001300_DTH.mp4",
+						"file_size": 365810887
+					}
+				},
+				"all_sources": [
+					"https://d2f1egay8yehza.cloudfront.net/HarvardXCS50W-V001300/HarvardXCS50W-V001300.m3u8"
+				]
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426",
+			"block_id": "3732bbca90394afd9aeb86c197dfa426",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@8efd3b50dc5041c195863cd6e3712043"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e",
+			"block_id": "2adc64be866f4d8e99eaf5910ba40f7e",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e",
+			"type": "sequential",
+			"display_name": "HTML, CSS",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@abbe52e8a67b4418ae75d84f92c84465",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@3732bbca90394afd9aeb86c197dfa426"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182",
+			"block_id": "11413dc7a4334e22b701720cb775c182",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182",
+			"type": "html",
+			"display_name": "Git",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78",
+			"block_id": "b1c469d6180c45e1b03bfcbd09a78f78",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78",
+			"type": "vertical",
+			"display_name": "Git",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@11413dc7a4334e22b701720cb775c182"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9",
+			"block_id": "c5de1865278843c9aaf45aa6cc10b8f9",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 3195.31,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001400/HarvardXCS50W-V001400.m3u8",
+						"file_size": 0
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001400_MB2.mp4",
+						"file_size": 91813874
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001400_DTH.mp4",
+						"file_size": 164625616
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6",
+			"block_id": "491cd816e2554378ac994cd14335c1c6",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@c5de1865278843c9aaf45aa6cc10b8f9"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4",
+			"block_id": "e1db1d5394cf476ba0c925010b94a5f4",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4",
+			"type": "sequential",
+			"display_name": "Git",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@b1c469d6180c45e1b03bfcbd09a78f78",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@491cd816e2554378ac994cd14335c1c6"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979",
+			"block_id": "b0c4cd02c7ca4cfea275a403b4307979",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979",
+			"type": "html",
+			"display_name": "Python",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74",
+			"block_id": "c07a8a851a644654b5bc89452cacae74",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74",
+			"type": "vertical",
+			"display_name": "Python",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@b0c4cd02c7ca4cfea275a403b4307979"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c",
+			"block_id": "f00f686a872d4f68ae547c3faf81c96c",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 4061.31,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002000/HarvardXCS50W-V002000.m3u8",
+						"file_size": 0
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002000_DTH.mp4",
+						"file_size": 220075957
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002000_MB2.mp4",
+						"file_size": 123404244
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200",
+			"block_id": "76f558a5e6d746978ebfe6610e208200",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@f00f686a872d4f68ae547c3faf81c96c"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0",
+			"block_id": "1f15588a9a7a47149f4c9dddea4edae0",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0",
+			"type": "sequential",
+			"display_name": "Python",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@c07a8a851a644654b5bc89452cacae74",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@76f558a5e6d746978ebfe6610e208200"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60",
+			"block_id": "82100e2af13b4a26afafb08179b6ab60",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60",
+			"type": "html",
+			"display_name": "Django",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518",
+			"block_id": "5cd43cbf663f477b9d055049c7d49518",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518",
+			"type": "vertical",
+			"display_name": "Django",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@82100e2af13b4a26afafb08179b6ab60"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322",
+			"block_id": "4a64a0abb42f4866ae109d322ebe7322",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 5944.49,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001700_MB2.mp4",
+						"file_size": 167438136
+					},
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001700/HarvardXCS50W-V001700.m3u8",
+						"file_size": 0
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001700_DTH.mp4",
+						"file_size": 294443407
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150",
+			"block_id": "0e44dd21c79641ff9fe2a6cd8cc92150",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@4a64a0abb42f4866ae109d322ebe7322"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78",
+			"block_id": "7c96b1e9ac10425c8943405f757bef78",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78",
+			"type": "sequential",
+			"display_name": "Django",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@5cd43cbf663f477b9d055049c7d49518",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@0e44dd21c79641ff9fe2a6cd8cc92150"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434",
+			"block_id": "fb5c9e858ce94aa1a05fa71cf79ed434",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434",
+			"type": "html",
+			"display_name": "SQL, Models, and Migrations",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46",
+			"block_id": "f9d2fe483fe84a6e95e6f5bfc955ea46",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46",
+			"type": "vertical",
+			"display_name": "SQL, Models, and Migrations",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@fb5c9e858ce94aa1a05fa71cf79ed434"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3",
+			"block_id": "d9af462be26a451382bfcfbf541205b3",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 6846.23,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002100/HarvardXCS50W-V002100.m3u8",
+						"file_size": 0
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002100_MB2.mp4",
+						"file_size": 217735512
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V002100_DTH.mp4",
+						"file_size": 410152024
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026",
+			"block_id": "5bdbb06fe1f24514954c49cc10813026",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@d9af462be26a451382bfcfbf541205b3"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d",
+			"block_id": "5b5791da2eec43c6b5d3d230ec66e75d",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d",
+			"type": "sequential",
+			"display_name": "SQL, Models, and Migrations",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@f9d2fe483fe84a6e95e6f5bfc955ea46",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@5bdbb06fe1f24514954c49cc10813026"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23",
+			"block_id": "cee81e860d1a4fc4a2229f2a9527fb23",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23",
+			"type": "html",
+			"display_name": "JavaScript",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f",
+			"block_id": "3553e4a6c3dd4a37a8f6c06bbda1002f",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f",
+			"type": "vertical",
+			"display_name": "JavaScript",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@cee81e860d1a4fc4a2229f2a9527fb23"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe",
+			"block_id": "ec3f0a829b2a4726a147fd262f210bbe",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 6685.29,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001900_DTH.mp4",
+						"file_size": 333958110
+					},
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001900/HarvardXCS50W-V001900.m3u8",
+						"file_size": 0
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001900_MB2.mp4",
+						"file_size": 190107180
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5",
+			"block_id": "fd94ae94c7e14f5a8ca499a56b8353d5",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@ec3f0a829b2a4726a147fd262f210bbe"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568",
+			"block_id": "6c98421076ef4cb285ecf92b7445d568",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568",
+			"type": "sequential",
+			"display_name": "JavaScript",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@3553e4a6c3dd4a37a8f6c06bbda1002f",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@fd94ae94c7e14f5a8ca499a56b8353d5"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e",
+			"block_id": "b6e214e8a4454e9cbb342ba277020e1e",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e",
+			"type": "html",
+			"display_name": "User Interfaces",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2",
+			"block_id": "67490a33f2ad4ca7ad3112a1cccc1fa2",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2",
+			"type": "vertical",
+			"display_name": "User Interfaces",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@b6e214e8a4454e9cbb342ba277020e1e"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5",
+			"block_id": "03a6f4038377483da22a7834fa5eeaa5",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 6014.848,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/fbfcfbac-7439-4f16-b1f6-8c0aef0c38bf.m3u8",
+						"file_size": 0
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/fbfcfbac-7439-4f16-b1f6-8c0aef0c38bf-mp4_720p.mp4",
+						"file_size": 419177443
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/fbfcfbac-7439-4f16-b1f6-8c0aef0c38bf-mp4_360p.mp4",
+						"file_size": 101035678
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb",
+			"block_id": "77fb71857008420ebdd660ab931e63cb",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@03a6f4038377483da22a7834fa5eeaa5"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7",
+			"block_id": "fb87b5c3917c4281a6993ceb0a9106e7",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7",
+			"type": "sequential",
+			"display_name": "User Interfaces",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@67490a33f2ad4ca7ad3112a1cccc1fa2",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@77fb71857008420ebdd660ab931e63cb"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170",
+			"block_id": "d61a8196cfbd41b4ab06b8a8f58f5170",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170",
+			"type": "html",
+			"display_name": "Testing, CI/CD",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49",
+			"block_id": "2fd6e26bd7a94b708afc8ba64be94c49",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49",
+			"type": "vertical",
+			"display_name": "Testing, CI/CD",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@d61a8196cfbd41b4ab06b8a8f58f5170"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1",
+			"block_id": "60355b124c154082bea3d32b601fded1",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 5638.23,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001500/HarvardXCS50W-V001500.m3u8",
+						"file_size": 0
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001500_MB2.mp4",
+						"file_size": 164030889
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001500_DTH.mp4",
+						"file_size": 298330666
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c",
+			"block_id": "b8768c5b730844b68e532041f119269c",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@60355b124c154082bea3d32b601fded1"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2",
+			"block_id": "bfdefb90e5cc40fca934ac14cd1450b2",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2",
+			"type": "sequential",
+			"display_name": "Testing, CI/CD",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@2fd6e26bd7a94b708afc8ba64be94c49",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@b8768c5b730844b68e532041f119269c"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1",
+			"block_id": "6479a34dbd91471fb219ae4ddf2f99d1",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1",
+			"type": "html",
+			"display_name": "Scalability and Security",
+			"graded": false,
+			"student_view_multi_device": true,
+			"block_counts": {
+				"video": 0
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a",
+			"block_id": "d4d21d05eba34f79995f5ca6b9a4350a",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a",
+			"type": "vertical",
+			"display_name": "Scalability and Security",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 0
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@html+block@6479a34dbd91471fb219ae4ddf2f99d1"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758",
+			"block_id": "5e68daff9fc74bd486cd440b1ec46758",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758",
+			"type": "video",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_data": {
+				"only_on_web": false,
+				"duration": 5265.86,
+				"transcripts": {
+					"en": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/xblock/block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758/handler_noauth/transcript/download?lang=en"
+				},
+				"encoded_videos": {
+					"hls": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001800/HarvardXCS50W-V001800.m3u8",
+						"file_size": 0
+					},
+					"desktop_mp4": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001800_DTH.mp4",
+						"file_size": 343656289
+					},
+					"mobile_low": {
+						"url": "https://edx-video.net/HarvardXCS50W-V001800_MB2.mp4",
+						"file_size": 169359580
+					}
+				},
+				"all_sources": []
+			},
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"completion": 0.0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a",
+			"block_id": "e2a2ec0a84564e549f392e571d41dd9a",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a",
+			"type": "vertical",
+			"display_name": "Lecture",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@video+block@5e68daff9fc74bd486cd440b1ec46758"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b",
+			"block_id": "cd401c2f836448e0afcc2178ae6fc79b",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b",
+			"type": "sequential",
+			"display_name": "Scalability and Security",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 1
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@d4d21d05eba34f79995f5ca6b9a4350a",
+				"block-v1:HarvardX+CS50W+Web+type@vertical+block@e2a2ec0a84564e549f392e571d41dd9a"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b",
+			"block_id": "ba04fcff2f544e4896970382f3ac4e9b",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b",
+			"type": "chapter",
+			"display_name": "CS50W 2020",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 10
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@cd0baed1a0854561a870e0d8db72f7ff",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@2adc64be866f4d8e99eaf5910ba40f7e",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@e1db1d5394cf476ba0c925010b94a5f4",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@1f15588a9a7a47149f4c9dddea4edae0",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@7c96b1e9ac10425c8943405f757bef78",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@5b5791da2eec43c6b5d3d230ec66e75d",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@6c98421076ef4cb285ecf92b7445d568",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@fb87b5c3917c4281a6993ceb0a9106e7",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@bfdefb90e5cc40fca934ac14cd1450b2",
+				"block-v1:HarvardX+CS50W+Web+type@sequential+block@cd401c2f836448e0afcc2178ae6fc79b"
+			],
+			"completion": 0
+		},
+		"block-v1:HarvardX+CS50W+Web+type@course+block@course": {
+			"id": "block-v1:HarvardX+CS50W+Web+type@course+block@course",
+			"block_id": "course",
+			"lms_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@course+block@course",
+			"legacy_web_url": "https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/jump_to/block-v1:HarvardX+CS50W+Web+type@course+block@course?experience=legacy",
+			"student_view_url": "https://courses.edx.org/xblock/block-v1:HarvardX+CS50W+Web+type@course+block@course",
+			"type": "course",
+			"display_name": "CS50's Web Programming with Python and JavaScript",
+			"graded": false,
+			"student_view_multi_device": false,
+			"block_counts": {
+				"video": 10
+			},
+			"descendants": [
+				"block-v1:HarvardX+CS50W+Web+type@chapter+block@ba04fcff2f544e4896970382f3ac4e9b"
+			],
+			"completion": 0
+		}
+	}
+}

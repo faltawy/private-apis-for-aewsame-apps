@@ -1,0 +1,1 @@
+curl -H 'Content-Type: application/x-www-form-urlencoded' -X POST https://animeify.net/animeify/apis_v2/movies/catalogmovies.php -d 'UserID=0&Language=AR&From=0'

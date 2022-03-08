@@ -1,0 +1,285 @@
+curl -H 'cache-control: stale-if-error=2147483647' -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'authorization: Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU' --compressed -H 'if-modified-since: Mon, 24 Jan 2022 09:24:11 GMT' https://courses.edx.org/api/mobile/v1/users/ah7255703/course_enrollments
+
+
+
+import requests
+
+headers = {
+    'cache-control': 'stale-if-error=2147483647',
+    'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2',
+    'authorization': 'Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU',
+    'if-modified-since': 'Mon, 24 Jan 2022 09:24:11 GMT',
+}
+
+response = requests.get('https://courses.edx.org/api/mobile/v1/users/ah7255703/course_enrollments', headers=headers)
+
+
+response
+
+
+[
+	{
+		"audit_access_expires": null,
+		"created": "2022-01-23T19:19:08Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:HarvardX+CS50W+Web",
+			"name": "CS50's Web Programming with Python and JavaScript",
+			"number": "CS50W",
+			"org": "HarvardX",
+			"start": "2018-07-01T06:00:00Z",
+			"start_display": "July 1, 2018",
+			"start_type": "timestamp",
+			"end": "2022-12-31T05:59:00Z",
+			"dynamic_upgrade_deadline": "2022-12-20T00:00:00Z",
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2JBQXE5TBOJSFQK2DKM2TAVZLK5SWE___",
+			"courseware_access": {
+				"has_access": true,
+				"error_code": null,
+				"developer_message": null,
+				"user_message": null,
+				"additional_context_user_message": null,
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:HarvardX+CS50W+Web+type@asset+block@course_image.png",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:HarvardX+CS50W+Web+type@asset+block@course_image.png",
+			"course_about": "https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HarvardX+CS50W+Web/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HarvardX+CS50W+Web/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:HarvardX+CS50W+Web",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	},
+	{
+		"audit_access_expires": null,
+		"created": "2022-01-08T21:59:59Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:HarvardX+CS50AI+1T2020",
+			"name": "CS50's Introduction to Artificial Intelligence with Python",
+			"number": "CS50AI",
+			"org": "HarvardX",
+			"start": "2020-04-01T05:00:00Z",
+			"start_display": "April 1, 2020",
+			"start_type": "timestamp",
+			"end": "2022-12-31T23:59:00Z",
+			"dynamic_upgrade_deadline": "2022-12-21T23:59:59Z",
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2JBQXE5TBOJSFQK2DKM2TAQKJFMYVIMRQGIYA____",
+			"courseware_access": {
+				"has_access": true,
+				"error_code": null,
+				"developer_message": null,
+				"user_message": null,
+				"additional_context_user_message": null,
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:HarvardX+CS50AI+1T2020+type@asset+block@course_image.png",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:HarvardX+CS50AI+1T2020+type@asset+block@course_image.png",
+			"course_about": "https://www.edx.org/course/cs50s-introduction-to-artificial-intelligence-with-python",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HarvardX+CS50AI+1T2020/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HarvardX+CS50AI+1T2020/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:HarvardX+CS50AI+1T2020",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	},
+	{
+		"audit_access_expires": null,
+		"created": "2021-11-05T13:52:30Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:UQx+IELTSx+1T2019",
+			"name": "IELTS Academic Test Preparation",
+			"number": "IELTSx",
+			"org": "UQx",
+			"start": "2019-02-05T00:00:00Z",
+			"start_display": "Coming soon",
+			"start_type": "string",
+			"end": "2019-12-16T00:00:00Z",
+			"dynamic_upgrade_deadline": null,
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2KVIXQK2JIVGFIU3YFMYVIMRQGE4Q____",
+			"courseware_access": {
+				"has_access": true,
+				"error_code": null,
+				"developer_message": null,
+				"user_message": null,
+				"additional_context_user_message": null,
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:UQx+IELTSx+1T2019+type@asset+block@course_image.jpg",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:UQx+IELTSx+1T2019+type@asset+block@course_image.jpg",
+			"course_about": "https://www.edx.org/course/ielts-academic-test-preparation-0",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:UQx+IELTSx+1T2019/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:UQx+IELTSx+1T2019/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:UQx+IELTSx+1T2019",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	},
+	{
+		"audit_access_expires": "2021-03-20T00:42:00Z",
+		"created": "2021-02-20T00:42:00Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:HKUx+Dentistry_2x+1T2020",
+			"name": "Digital Biomaterials",
+			"number": "Dentistry_2x",
+			"org": "HKUx",
+			"start": "2020-03-22T00:00:00Z",
+			"start_display": "March 22, 2020",
+			"start_type": "timestamp",
+			"end": "2022-12-31T23:59:00Z",
+			"dynamic_upgrade_deadline": null,
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2JBFVK6BLIRSW45DJON2HE6K7GJ4CWMKUGIYDEMA_",
+			"courseware_access": {
+				"has_access": false,
+				"error_code": "audit_expired",
+				"developer_message": "User ah7255703 had access to course-v1:HKUx+Dentistry_2x+1T2020 until 2021-03-20 00:42:00+00:00",
+				"user_message": "Access expired on Mar 20, 2021",
+				"additional_context_user_message": "Access to Digital Biomaterials expired on Mar 20, 2021",
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:HKUx+Dentistry_2x+1T2020+type@asset+block@course_image.jpg",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:HKUx+Dentistry_2x+1T2020+type@asset+block@course_image.jpg",
+			"course_about": "https://www.edx.org/course/materials-in-oral-health",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HKUx+Dentistry_2x+1T2020/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:HKUx+Dentistry_2x+1T2020/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:HKUx+Dentistry_2x+1T2020",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	},
+	{
+		"audit_access_expires": "2021-04-17T00:31:24Z",
+		"created": "2021-02-20T00:31:24Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:DoaneX+BIOL-210x+2T2020",
+			"name": "Medical Terminology",
+			"number": "BIOL-210x",
+			"org": "DoaneX",
+			"start": "2020-07-02T12:00:00Z",
+			"start_display": "July 2, 2020",
+			"start_type": "timestamp",
+			"end": "2022-06-29T17:00:00Z",
+			"dynamic_upgrade_deadline": "2022-06-19T23:59:59Z",
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2IRXWC3TFLAVUESKPJQWTEMJQPAVTEVBSGAZDA___",
+			"courseware_access": {
+				"has_access": false,
+				"error_code": "audit_expired",
+				"developer_message": "User ah7255703 had access to course-v1:DoaneX+BIOL-210x+2T2020 until 2021-04-17 00:31:24+00:00",
+				"user_message": "Access expired on Apr 17, 2021",
+				"additional_context_user_message": "Access to Medical Terminology expired on Apr 17, 2021",
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:DoaneX+BIOL-210x+2T2020+type@asset+block@course_image.jpg",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:DoaneX+BIOL-210x+2T2020+type@asset+block@course_image.jpg",
+			"course_about": "https://www.edx.org/course/medical-terminology-course-v1doanexbiol-210x2t2020",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:DoaneX+BIOL-210x+2T2020/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:DoaneX+BIOL-210x+2T2020/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:DoaneX+BIOL-210x+2T2020",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	},
+	{
+		"audit_access_expires": null,
+		"created": "2018-06-26T19:45:58Z",
+		"mode": "audit",
+		"is_active": true,
+		"course": {
+			"id": "course-v1:LinuxFoundationX+LFS101x+1T2017",
+			"name": "Introduction to Linux",
+			"number": "LFS101x",
+			"org": "LinuxFoundationX",
+			"start": "2017-03-23T08:00:00Z",
+			"start_display": "March 23, 2017",
+			"start_type": "timestamp",
+			"end": "2018-09-23T08:00:00Z",
+			"dynamic_upgrade_deadline": null,
+			"subscription_id": "course_MNXXK4TTMUWXMMJ2JRUW45LYIZXXK3TEMF2GS33OLAVUYRSTGEYDC6BLGFKDEMBRG4______",
+			"courseware_access": {
+				"has_access": true,
+				"error_code": null,
+				"developer_message": null,
+				"user_message": null,
+				"additional_context_user_message": null,
+				"user_fragment": null
+			},
+			"media": {
+				"course_image": {
+					"uri": "/asset-v1:LinuxFoundationX+LFS101x+1T2017+type@asset+block@MOOC_thumbnail-linux-262x136.jpg",
+					"name": "Course Image"
+				}
+			},
+			"course_image": "/asset-v1:LinuxFoundationX+LFS101x+1T2017+type@asset+block@MOOC_thumbnail-linux-262x136.jpg",
+			"course_about": "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1",
+			"course_sharing_utm_parameters": {
+				"facebook": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=facebook",
+				"twitter": "utm_medium=social&utm_campaign=social-sharing-db&utm_source=twitter"
+			},
+			"course_updates": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:LinuxFoundationX+LFS101x+1T2017/updates",
+			"course_handouts": "https://courses.edx.org/api/mobile/v1/course_info/course-v1:LinuxFoundationX+LFS101x+1T2017/handouts",
+			"discussion_url": "https://courses.edx.org/api/discussion/v1/courses/course-v1:LinuxFoundationX+LFS101x+1T2017",
+			"video_outline": null,
+			"is_self_paced": true
+		},
+		"certificate": {}
+	}
+]

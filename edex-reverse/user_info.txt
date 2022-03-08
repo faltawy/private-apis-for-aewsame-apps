@@ -1,0 +1,64 @@
+
+user info 
+
+curl -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'authorization: Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU' --compressed https://courses.edx.org/api/mobile/v0.5/users/ah7255703
+
+{
+	"id": 19715930,
+	"username": "ah7255703",
+	"email": "ah7255703@gmail.com",
+	"name": "احمد حسن سليم",
+	"course_enrollments": "https://courses.edx.org/api/mobile/v0.5/users/ah7255703/course_enrollments/"
+}
+
+curl -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'authorization: Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU' --compressed -H 'cookie: ' https://courses.edx.org/api/mobile/v0.5/my_user_info
+
+
+curl -H 'cache-control: stale-if-error=2147483647' -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'authorization: Bearer 9hTcrnuifrqTIA8xnNELxeOInOLqMU' --compressed https://courses.edx.org/api/user/v1/accounts/ah7255703
+
+
+{
+	"account_privacy": "all_users",
+	"profile_image": {
+		"has_image": false,
+		"image_url_full": "https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/images/profiles/default_500.3292bbf079b8.png",
+		"image_url_large": "https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/images/profiles/default_120.7c4c5c6b90a1.png",
+		"image_url_medium": "https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/images/profiles/default_50.d29941819645.png",
+		"image_url_small": "https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/images/profiles/default_30.ee82223aa027.png"
+	},
+	"username": "ah7255703",
+	"bio": null,
+	"course_certificates": null,
+	"country": "EG",
+	"date_joined": "2018-06-26T19:45:46Z",
+	"language_proficiencies": [
+		{
+			"code": "en"
+		}
+	],
+	"level_of_education": "jhs",
+	"social_links": [],
+	"time_zone": null,
+	"accomplishments_shared": false,
+	"name": "احمد حسن سليم",
+	"email": "ah7255703@gmail.com",
+	"id": 19715930,
+	"verified_name": null,
+	"extended_profile": [],
+	"gender": "m",
+	"state": null,
+	"goals": "اريد ان احترف نظام Kali Linux",
+	"is_active": true,
+	"last_login": "2022-01-24T09:34:33.909666Z",
+	"mailing_address": "",
+	"requires_parental_consent": false,
+	"secondary_email": null,
+	"secondary_email_enabled": true,
+	"year_of_birth": 2002,
+	"phone_number": null,
+	"activation_key": "36a967858084490a81429bfeb3e96679",
+	"pending_name_change": null
+}
+
+
+

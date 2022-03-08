@@ -1,0 +1,33 @@
+get access_token
+
+curl -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'content-type: application/x-www-form-urlencoded' --compressed -X POST https://courses.edx.org/oauth2/access_token/ -d 'grant_type=password&client_id=wGSpSAiKsam8CgBpYvClGBvPVJoLdgni6OpQnjR2&username=ah7255703%40gmail.com&password=AHahmedhassan1234'
+
+import requests
+
+headers = {
+    'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2',
+    'content-type': 'application/x-www-form-urlencoded',
+}
+
+
+client_id = 'wGSpSAiKsam8CgBpYvClGBvPVJoLdgni6OpQnjR2' for the app
+انا اتاكدت من كدا 
+
+
+data = {
+  'grant_type': 'password',
+  'client_id': 'wGSpSAiKsam8CgBpYvClGBvPVJoLdgni6OpQnjR2',
+  'username': 'ah7255703@gmail.com',
+  'password': 'AHahmedhassan1234'
+}
+
+response = requests.post('https://courses.edx.org/oauth2/access_token/', headers=headers, data=data)
+
+{
+	"access_token": "fRDMu9WN4LCpE27f3KrDuT680yqNqO",
+	"expires_in": 36000,
+	"token_type": "Bearer",
+	"scope": "read write email profile",
+	"refresh_token": "bSjwNmBOf8TTfqlZFdkgAz63mP7o72"
+}
+

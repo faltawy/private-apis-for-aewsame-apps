@@ -1,0 +1,41 @@
+
+register schema 
+
+curl -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' --compressed https://courses.edx.org/user_api/v2/account/registration/
+
+
+
+import requests
+
+headers = {
+    'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2',
+}
+
+response = requests.get('https://courses.edx.org/user_api/v2/account/registration/', headers=headers)
+
+
+
+register actual __________________
+
+curl -H 'user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2' -H 'content-type: application/x-www-form-urlencoded' --compressed -X POST https://courses.edx.org/user_api/v2/account/registration/ -d 'email=a37255703%40gmail.com&name=Ahmed%20Hassan%20Sleem%20Waaer&password=AHahmedhassan1234&country=EG&terms_of_service=true&honor_code=true&username=ah7255753'
+
+
+import requests
+
+headers = {
+    'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H) edX/org.edx.mobile/3.0.2',
+    'content-type': 'application/x-www-form-urlencoded',
+}
+
+data = {
+  'email': 'a37255703@gmail.com',
+  'name': 'Ahmed Hassan Sleem Waaer',
+  'password': 'AHahmedhassan1234',
+  'country': 'EG',
+  'terms_of_service': 'true',
+  'honor_code': 'true',
+  'username': 'ah7255753'
+}
+
+response = requests.post('https://courses.edx.org/user_api/v2/account/registration/', headers=headers, data=data)
+

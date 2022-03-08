@@ -1,0 +1,1 @@
+curl -H 'Content-Type: application/x-www-form-urlencoded' -H 'Csrf-Token: ajax:1244648932159198500' -H 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; G011A Build/N2G48H)' -H 'Connection: Keep-Alive' --compressed -H 'Cookie: JSESSIONID=ajax:1244648932159198500; language=**' -X POST https://www.slideshare.net/forgot-password -d 'email=ah7255703%40gmail.com&'
