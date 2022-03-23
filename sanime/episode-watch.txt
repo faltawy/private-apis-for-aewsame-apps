@@ -1,0 +1,1 @@
+curl -H 'User-Agent: exoplayer_video' --compressed -H 'Connection: Keep-Alive' https://cdn.sanime.net/Video/00029/2.mp4

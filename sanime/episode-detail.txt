@@ -1,0 +1,1 @@
+curl -H 'user-agent: IBRAHIMSEVEN' -H 'accept: */*' -H 'referer: https://app.sanime.net/info?id=00029' --compressed -H 'accept-language: en-US' -H 'x-requested-with: com.sanime.developer.sanime' 'https://app.sanime.net/secure/openAnd.php?id=eyJpZCI6IjAwMDI5RVAtMSIsIm5hbWUiOiLYp9mE2K3ZhNmC2KkgMSIsImVwTmFtZSI6MSwiZGF0ZSI6IjIwMjItMDEtMjkgMjM6NTE6MDYuMjE5NTgzIn0='
