@@ -34,18 +34,16 @@ class AnimeManga(BaseModel):
     name: str
     slug: str
     status_id: int
-    author: str
     other_names: Optional[str]
     summary: str
     cover: str
     caution: int
     views: int
-    artist: str
-    type_id: int
+    type_id: int = None
     authors: List[Artist]
     artists:Optional[List[Artist]] 
-    status: Status
-    type: Status
+    status: Optional[Status]
+    type: Optional[Status]
     categories: List[Category]
     chapters:Optional[List[Chapter]]
 
@@ -56,8 +54,3 @@ class Category(BaseModel):
     id: int
     name: str
     slug: str
-
-
-class ChapterPage(BaseModel):
-    chapter_slug:str = Chapter
-    pages_url:List[str]

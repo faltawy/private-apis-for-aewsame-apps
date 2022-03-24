@@ -5,9 +5,7 @@ from typing import List
 from manga_arab.models import (
     AnimeManga,
     Category,
-    Artist,
     Chapter,
-    ChapterPage,
     Status)
 from manga_arab.exceptions import (ConnectionError,NoResults)
 
@@ -26,7 +24,7 @@ async def get(*args, **kwargs)->ClientResponse:
 mangapi = MangaArabApi
 
 async def search(search_term:str) -> List[AnimeManga]:
-    querystring = {"name":str(search_term),"API_key":mangapi.API_key}
+    querystring = {"name":str(search_term.LOWER()),"API_key":mangapi.API_key}
     async with ClientSession() as session:
         response = await session.get(mangapi.get_endpoint('search'),params=querystring)
         if not response.ok:
@@ -65,3 +63,4 @@ async def read_chapter(anime_slug:str,chapter:int):
         NoResults(anime_slug + str(chapter))
     chapter_data =await response.json()
     return chapter_data.get('pages_url')
+
