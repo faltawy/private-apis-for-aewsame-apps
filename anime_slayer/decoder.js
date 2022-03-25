@@ -177,9 +177,6 @@ function getServer(url , content){
 }
 
 
-
-// Files 
-
 function Solidfiles(url,content) {
 
     var urls = [];

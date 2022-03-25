@@ -1,0 +1,1 @@
+curl -H 'User-Agent: Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Connection: Keep-Alive' --compressed -X POST https://anslayer.com/la/public/api/fw -d 'n=platinum_end%5C24&inf='
