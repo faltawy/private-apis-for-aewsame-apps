@@ -3,19 +3,13 @@ from manga_arab.utils import MangaArabApi
 from typing import List
 from manga_arab.models import AnimeManga
 from manga_arab.exceptions import (ConnectionError,NoResults)
-import asyncio
+
 
 
 mangapi = MangaArabApi
 class Getter:
-    def __init__(self) -> None:
-        self.session = ClientSession()
-    
-    async def get(self,*args, **kwargs)->ClientResponse:
-        async with self.session.get(*args, **kwargs) as resp:
-            assert resp.ok
-            return resp
-    
+    session = ClientSession()
+        
     async def search(self,search_term:str) ->List[AnimeManga]:
         querystring = {"name":str(search_term).lower(),"API_key":mangapi.API_key}
         async with self.session as session:
@@ -33,25 +27,23 @@ class Getter:
     async def get_details(self,anime_slug:str)->AnimeManga:
         url = mangapi.get_endpoint('manga-info')%(anime_slug)
         querystring = {"API_key":mangapi.API_key}
-        response = await self.get(url,params=querystring)
-        _details = await response.json()
+        async with self.session.get(url,params=querystring) as resp:
+            _details = await resp.json()
         try:
-            __details  = await _details.get('data')
-            details = await __details.get('infoManga')[0]
+            details = _details.get('data').get('infoManga')[0]
             return AnimeManga(**details)
         except Exception as e:
             print(e)
             raise NoResults(anime_slug)
 
 
-
-
     async def read_chapter(self,anime_slug:str,chapter:int):
         querystring = {"API_key":mangapi.API_key}
         url = mangapi.get_endpoint('read-chapter')%(anime_slug,str(chapter))
+        print(url)
         try:
-            response = await self.get(url,params=querystring)
-            chapter_data =await response.json()
+            async with self.session.get(url,params=querystring) as response:
+                chapter_data =await response.json()
             return chapter_data.get('pages_url')
         except:
             NoResults(anime_slug + str(chapter))
